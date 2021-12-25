@@ -1,0 +1,1 @@
+// O This seria uma forma de referencias o objeto atual de uma execução
