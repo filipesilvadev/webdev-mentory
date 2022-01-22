@@ -15,5 +15,5 @@ console.log(pilotos)
 pilotos.slice(2, 0, 'Bottas', 'Massa')
 console.log(pilotos)
 
-pilotos.splice(3, 1)
+pilotos.splice(3, 1) //Primeiro 
 console.log(pilotos)
