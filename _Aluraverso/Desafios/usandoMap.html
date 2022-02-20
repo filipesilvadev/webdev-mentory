@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Salário</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela-funcionarios">
+          
+        <tbody>
+    </table>
+
+    <script>
+        let funcionarios = [
+            {
+                "nome": "Douglas",
+                "endereco" : "Rua da esquina, 123",
+                "salario" : "4500"
+            },
+            {
+                "nome": "Felipe",
+                "endereco" : "Rua da virada, 456",
+                "salario" : "5000"
+            },
+            {
+                "nome": "Silvio",
+                "endereco" : "Rua da aresta, 789",
+                "salario" : "6000"
+            }
+        ]
+            
+
+           let dadosTabela = funcionarios.map(funcionarioAtual=>              
+              `
+                <tr>
+                  <td>${funcionarioAtual.nome}</td>
+                  <td>${funcionarioAtual.endereco}</td>
+                  <td>${funcionarioAtual.salario}</td>
+                </tr>
+              `
+            ).join('')
+            
+            let tabela = document.querySelector('#tabela-funcionarios')
+                tabela.innerHTML = dadosTabela
+    </script>
+</body>
+</html>
