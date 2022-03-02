@@ -36,7 +36,7 @@
         <button class="btn btn-primary text-center" type="button">
             Importar Negociações
         </button>
-        <button class="btn btn-primary text-center" type="button">
+        <button class="btn btn-primary text-center" id="deletar-btn" type="button">
             Apagar
         </button>
     </div> 
@@ -58,11 +58,14 @@
     
     let negociacaoController = new NegociacaoController()
     
-    let formulario = document.querySelector('form.form')
+    let formulario = document.querySelector('form.form'),
+        deleteBtn  = document.querySelector('#deletar-btn')
 
         formulario.addEventListener('submit', function(evento){
             negociacaoController.adiciona(evento)
         })
+
+        deleteBtn.addEventListener('click',()=>negociacaoController.deleta())
         
     </script>
 </body>
