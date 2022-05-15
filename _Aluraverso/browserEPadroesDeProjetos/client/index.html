@@ -65,7 +65,11 @@
             negociacaoController.adiciona(evento)
         })
 
-        deleteBtn.addEventListener('click',()=>negociacaoController.deleta())
+        deleteBtn.addEventListener('click', function(evento){
+          negociacaoController.deleta()
+        })
+
+        // deleteBtn.addEventListener('click',()=>negociacaoController.deleta())
         
     </script>
 </body>
